@@ -3558,3 +3558,6 @@ x = address where the jump goes to
 .macro	EndMovement a
 .hword  0xfe, \a
 .endm
+
+
+.include "macros/script_plat_hack.s"

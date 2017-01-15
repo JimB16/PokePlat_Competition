@@ -9,6 +9,8 @@
 .include "macros/script_plat.s"
 
 
+.equ HACK, 1
+
 
 /* macro replacement for "add/sub rn, rn, #value<8"-instruction
 

@@ -18930,6 +18930,9 @@ Function_2047de8: @ 2047de8 :thumb
 @ 0x2047e1e
 
 
+.ifndef HACK
+
+
 
 .align 2, 0
 .thumb
@@ -19283,6 +19286,15 @@ ScriptCmd_347: @ 2048080 :thumb
 	mov     r0, #0x0
 	pop     {r4,pc}
 @ 0x20480a6
+
+.endif @ .ifndef HACK
+
+
+.ifdef HACK
+
+.include "source/arm9_scriptcmds_hack3.s"
+
+.endif @ .ifdef HACK
 
 
 thumb_func_start Function_20480a8
@@ -36089,6 +36101,9 @@ branch_204f6c2: @ 204f6c2 :thumb
 @ 0x204f6d6
 
 
+.ifndef HACK
+
+
 
 .align 2, 0
 .thumb
@@ -36482,6 +36497,15 @@ branch_204f9c2: @ 204f9c2 :thumb
 .word NrOfPkmn @ 0x204f9cc
 .word 0x2710 @ 0x204f9d0
 
+
+.endif @ ifndef HACK
+
+
+.ifdef HACK
+
+.include "source/arm9_scriptcmds_hack2.s"
+
+.endif @ .ifdef HACK
 
 
 thumb_func_start ScriptCmd_32a
@@ -37369,6 +37393,9 @@ branch_205003a: @ 205003a :thumb
 @ 0x205003c
 
 
+.ifndef HACK
+
+
 thumb_func_start ScriptCmd_2d9
 ScriptCmd_2d9: @ 205003c :thumb
 	push    {r3-r7,lr}
@@ -37627,4 +37654,13 @@ ScriptCmd_2da: @ 20501d8 :thumb
 	pop     {r4-r6,pc}
 thumb_func_end ScriptCmd_2da
 
+
+.endif @ ifndef HACK
+
+
+.ifdef HACK
+
+.include "source/arm9_scriptcmds_hack1.s"
+
+.endif @ ifdef HACK
 

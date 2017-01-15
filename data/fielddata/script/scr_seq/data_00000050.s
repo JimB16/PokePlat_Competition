@@ -313,6 +313,10 @@ Movement_348: @ 348
 @ 350
 
 Script_5: @ 350
+.ifdef HACK
+    .include "data/fielddata/script/scr_seq/data2_00000050_hack.s"
+.endif
+
 	PlayFanfare 0x5dc
 	LockAll
 	FacePlayer
